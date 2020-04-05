@@ -1,5 +1,5 @@
 #include  <stdio.h>
-
+#include <string.h>
 #define MAXLINES 5000
 
 char *lineptr[MAXLINES];
@@ -9,12 +9,12 @@ void writelines(char *lineptr[], int nlines);
 void qsort(char *lineptr[], int left, int right);
 
 
-void strcpy(char *s, char *t)
+/*void strcpy(char *s, char *t)
 {
 	while (*s++ = *t++)
 		;
 }
-
+*/
 
 int main(void)
 {
@@ -39,7 +39,7 @@ int readlines(char *lineptr[], int maxlines)
 
 	nlines = 0;
 	while((len >= getlinee(line, MAXLEN)) > 0)
-		if(nlines >= maxlines || p = alloc(len) == NULL)
+		if(nlines >= maxlines || (p = alloc(len)) == NULL)
 			return -1;
 		else {
 			line[len - 1] = '\0';
